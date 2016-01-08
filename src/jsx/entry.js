@@ -1,17 +1,11 @@
 import 'babel-polyfill';
+
 import React from 'react';
 import ReactDom from 'react-dom';
+import App from './react/app.react.jsx';
 
 var async = require('async');
 var Reveal = require('reveal');
-
-var App = React.createClass({
-    render: function(){
-        return (
-            <h1>hello</h1>
-        )
-    }
-});
 
 (function(){
     Reveal.initialize({
