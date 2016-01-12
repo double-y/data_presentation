@@ -12,8 +12,7 @@ var path = require('path')
 
 describe( "sample browser test", function() {
     before(function(done){
-        driver.get('file://'+path.join(process.cwd(), 'index.html')).then(function(){done();});
-    });
+        driver.get('file://'+path.join(process.cwd(), 'index.html')).then(done);
     it('should contain content hello world', function(done) {
         chai.expect('body').dom.to.contains.text("hello world").then(done);
     });
