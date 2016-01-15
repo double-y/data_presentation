@@ -11,12 +11,13 @@ var should = chai.should();
 var path = require('path')
 
 describe( "sample browser test", function() {
-    before(function(done){
-        driver.get('file://'+path.join(process.cwd(), 'index.html')).then(done);
-    it('should contain content hello world', function(done) {
+    before( (done) => {
+        driver.get('file://'+path.join(process.cwd(), 'index.html')).then(done)
+    });
+    it('should contain content hello world', (done) => {
         chai.expect('body').dom.to.contains.text("hello world").then(done);
     });
-    after( function(done) {
+    after( (done) => {
         driver.quit().then(done);
     });
 });
