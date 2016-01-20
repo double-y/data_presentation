@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './src/jsx/entry.js',
+    entry: './src/jsx/entry.jsx',
     output: {
         path: './build/js',
         filename: 'bundle.js'
@@ -10,11 +10,13 @@ module.exports = {
     module: {
         loaders: [
             {
-                loaders: ['react-hot', 'babel-loader?presets[]=react,presets[]=es2015,presets[]=stage-0'],
+                loaders: ['react-hot', 'babel-loader'],
                 test: /.jsx?$/
             }
         ]
     },
+    watch: true,
+    cache: true,
     plugins: [
         // Avoid publishing files when compilation fails
         new webpack.NoErrorsPlugin()

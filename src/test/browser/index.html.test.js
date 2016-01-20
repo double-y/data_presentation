@@ -44,8 +44,8 @@ describe( "index.html in browser", function() {
     before( (done) => {
         driver.get('file://'+path.join(process.cwd(), 'index.html')).then(done);
     });
-    it('should contain #app', (done) => {
-        chai.expect('body > #app').dom.to.have.count(1).then(done);
+    it('should contain body', (done) => {
+        chai.expect('body').dom.to.have.count(1).then(done);
     });
     after( (done) => {
         driver.quit().then(done);

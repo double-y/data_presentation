@@ -4,7 +4,6 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import App from './react/app.react.jsx';
 
-var async = require('async');
-(function(){
-    ReactDom.render(<App/>, document.getElementById('app'));
-})();
+document.addEventListener("DOMContentLoaded", function(event) {
+    ReactDom.render(<App></App>, document.body);
+});
