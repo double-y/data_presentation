@@ -53,6 +53,7 @@
     "async": "^1.5.2",
     "babel-polyfill": "^6.3.14",
     "babel-runtime": "^6.3.19",
+    "d3": "^3.5.13",
     "path": "^0.12.7",
     "promise-parallel": "^1.0.1",
     "reveal": "0.0.4"
